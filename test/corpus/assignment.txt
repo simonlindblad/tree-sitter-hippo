@@ -1,0 +1,20 @@
+==================
+Assignments
+==================
+
+var1 = 1
+var2 = "hello"
+var3 = var1
+
+---
+
+(source_file
+    (assignment
+        (identifier)
+        (num_literal))
+    (assignment
+        (identifier)
+        (string_literal))
+    (assignment
+        (identifier)
+        (identifier)))

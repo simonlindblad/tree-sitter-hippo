@@ -1,0 +1,26 @@
+==================
+Expressions
+==================
+
+filter(data, @C1 > 2 and @C1 < 5)
+
+---
+
+(source_file
+    (function_call
+        function: (identifier)
+        (argument
+            (identifier))
+        (argument
+            (binary_expression
+                (binary_expression
+                    (column_identifier
+                        (identifier))
+                    operator: (comparison_operator)
+                    (num_literal))
+                operator: (and_operator)
+                (binary_expression
+                    (column_identifier
+                        (identifier))
+                    operator: (comparison_operator)
+                    (num_literal))))))

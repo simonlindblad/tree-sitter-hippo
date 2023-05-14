@@ -1,0 +1,25 @@
+==================
+Function Definition
+==================
+
+fn read_csv(path) {
+    read(csv {
+        path: path
+    })
+}
+
+---
+
+(source_file
+    (function_definition
+        (identifier)
+        (parameter
+            (identifier))
+        (function_call
+            (identifier)
+            (argument
+                (data_definition
+                    (identifier)
+                    (data_definition_parameter
+                        (identifier)
+                        (identifier)))))))

@@ -1,0 +1,16 @@
+==================
+Chains
+==================
+
+read(test) | print()
+
+---
+
+(source_file
+    (expression_chain
+        (function_call
+            (identifier)
+            (argument
+                (identifier)))
+        (function_call
+            (identifier))))

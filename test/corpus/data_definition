@@ -1,0 +1,33 @@
+==================
+Data definition
+==================
+
+csv { }
+
+csv {
+    path: "/tmp/test"
+}
+
+csv {
+    path: "/tmp/test",
+    delimeter: csv_delim
+}
+
+---
+
+(source_file
+    (data_definition
+        (identifier))
+    (data_definition
+        (identifier)
+        (data_definition_parameter
+            (identifier)
+            (string_literal)))
+    (data_definition
+        (identifier)
+        (data_definition_parameter
+            (identifier)
+            (string_literal))
+        (data_definition_parameter
+            (identifier)
+            (identifier))))
