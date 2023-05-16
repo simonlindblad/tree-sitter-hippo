@@ -33,6 +33,7 @@ module.exports = grammar({
 
         // _base_expression is a helper rule that allows us to define the standalone (non-chained) expressions we support.
         _base_expression: $ => choice(
+            $.alias,
             $.data_definition,
             $.binary_expression,
             $.identifier,
@@ -47,6 +48,12 @@ module.exports = grammar({
             $._base_expression,
             repeat1(seq('|', $.function_call))
         )),
+
+        alias: $ => seq(
+            $._base_expression,
+            'as',
+            $.identifier
+        ),
 
         data_definition: $ => seq(
             $.identifier,

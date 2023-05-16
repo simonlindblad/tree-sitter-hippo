@@ -31,6 +31,9 @@
     "@" @punctuation.special
     (identifier) @variable)
 
+  (alias
+    (identifier) @variable)
+
   ; Binary Expressions
   ((binary_expression operator: (or_operator)) @operator)
   ((binary_expression operator: (and_operator)) @operator)
@@ -45,6 +48,7 @@
   "{" @punctuation.bracket
   "}" @punctuation.bracket
 
+  "as" @keyword
   "fn" @keyword
   ":" @punctuation.delimiter
 ]

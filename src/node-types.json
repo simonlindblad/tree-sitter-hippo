@@ -5,6 +5,49 @@
     "fields": {}
   },
   {
+    "type": "alias",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "alias",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "column_identifier",
+          "named": true
+        },
+        {
+          "type": "data_definition",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "num_literal",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "argument",
     "named": true,
     "fields": {},
@@ -12,6 +55,10 @@
       "multiple": false,
       "required": true,
       "types": [
+        {
+          "type": "alias",
+          "named": true
+        },
         {
           "type": "assignment",
           "named": true
@@ -70,6 +117,10 @@
       "multiple": false,
       "required": true,
       "types": [
+        {
+          "type": "alias",
+          "named": true
+        },
         {
           "type": "binary_expression",
           "named": true
@@ -140,6 +191,10 @@
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "alias",
+          "named": true
+        },
         {
           "type": "binary_expression",
           "named": true
@@ -219,6 +274,10 @@
       "required": true,
       "types": [
         {
+          "type": "alias",
+          "named": true
+        },
+        {
           "type": "binary_expression",
           "named": true
         },
@@ -261,6 +320,10 @@
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "alias",
+          "named": true
+        },
         {
           "type": "binary_expression",
           "named": true
@@ -337,6 +400,10 @@
       "multiple": true,
       "required": false,
       "types": [
+        {
+          "type": "alias",
+          "named": true
+        },
         {
           "type": "assignment",
           "named": true
@@ -417,6 +484,10 @@
       "multiple": true,
       "required": false,
       "types": [
+        {
+          "type": "alias",
+          "named": true
+        },
         {
           "type": "assignment",
           "named": true
@@ -527,6 +598,10 @@
   {
     "type": "and_operator",
     "named": true
+  },
+  {
+    "type": "as",
+    "named": false
   },
   {
     "type": "comment",

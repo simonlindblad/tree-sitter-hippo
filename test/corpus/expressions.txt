@@ -4,6 +4,9 @@ Expressions
 
 filter(data, @C1 > 2 and @C1 < 5)
 
+data as raw_data
+1+1 as raw_data
+
 ---
 
 (source_file
@@ -23,4 +26,14 @@ filter(data, @C1 > 2 and @C1 < 5)
                     (column_identifier
                         (identifier))
                     operator: (comparison_operator)
-                    (num_literal))))))
+                    (num_literal)))))
+    (alias
+        (identifier)
+        (identifier))
+    (alias
+        (binary_expression
+            (num_literal)
+            operator: (add_sub_operator)
+            (num_literal))
+        (identifier))
+    )
