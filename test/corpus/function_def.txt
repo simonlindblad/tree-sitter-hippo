@@ -2,7 +2,7 @@
 Function Definition
 ==================
 
-fn read_csv(path) {
+read_csv = fn (path) {
     read(csv {
         path: path
     })
@@ -11,15 +11,16 @@ fn read_csv(path) {
 ---
 
 (source_file
-    (function_definition
+    (assignment
         (identifier)
-        (parameter
+        (function
+            (parameter
             (identifier))
-        (function_call
-            (identifier)
-            (argument
-                (data_definition
-                    (identifier)
-                    (data_definition_parameter
+            (function_call
+                (identifier)
+                (argument
+                    (data_definition
                         (identifier)
-                        (identifier)))))))
+                        (data_definition_parameter
+                            (identifier)
+                            (identifier))))))))

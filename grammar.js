@@ -15,7 +15,6 @@ module.exports = grammar({
         _statement: $ => choice(
             $.assignment,
             $._expression,
-            $.function_definition,
         ),
 
         // assignment is a rule that matches a variable assignment
@@ -35,12 +34,23 @@ module.exports = grammar({
         _base_expression: $ => choice(
             $.alias,
             $.data_definition,
+            $.function,
             $.binary_expression,
             $.identifier,
             $.column_identifier,
             $.num_literal,
             $.string_literal,
             $.function_call
+        ),
+
+        function: $ => seq(
+            'fn',
+            '(',
+                optional($._parameter_list),
+            ')',
+            '{',
+                optional(repeat($._statement)),
+            '}'
         ),
 
         // expression_chain is a rule that matches a chain of expressions
@@ -74,17 +84,6 @@ module.exports = grammar({
         ),
 
         operator: $ => $.identifier,
-
-        function_definition: $ => prec(10, seq(
-            'fn',
-            field('name', $.identifier),
-            '(',
-                optional($._parameter_list),
-            ')',
-            '{',
-                optional(repeat($._statement)),
-            '}'
-        )),
 
         _parameter_list: $ => seq(
             $.parameter,

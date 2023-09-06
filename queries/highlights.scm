@@ -1,6 +1,5 @@
 [
-  (function_definition
-    name: (identifier) @function)
+  (function) @function
 
   (comment) @comment
 
