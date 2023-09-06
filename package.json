@@ -1,17 +1,25 @@
 {
-  "name": "tree-sitter-hippo",
-  "version": "1.0.0",
-  "description": "Tree sitter grammar for hippo",
-  "main": "bindings/node",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "nan": "^2.17.0"
-  },
-  "devDependencies": {
-    "tree-sitter-cli": "^0.20.7"
-  }
+    "name": "tree-sitter-hippo",
+    "version": "1.0.0",
+    "description": "Tree sitter grammar for hippo",
+    "main": "bindings/node",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "nan": "^2.17.0"
+    },
+    "devDependencies": {
+        "tree-sitter-cli": "^0.20.7"
+    },
+    "tree-sitter": [
+        {
+            "scope": "source.hippo",
+            "file-types": [
+                "hip"
+            ]
+        }
+    ]
 }

@@ -17,13 +17,13 @@ data as raw_data
         (argument
             (binary_expression
                 (binary_expression
-                    (column_identifier
+                    (column_reference
                         (identifier))
                     operator: (comparison_operator)
                     (num_literal))
                 operator: (and_operator)
                 (binary_expression
-                    (column_identifier
+                    (column_reference
                         (identifier))
                     operator: (comparison_operator)
                     (num_literal)))))

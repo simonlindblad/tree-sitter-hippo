@@ -37,10 +37,17 @@ module.exports = grammar({
             $.function,
             $.binary_expression,
             $.identifier,
-            $.column_identifier,
+            $.column_reference,
             $.num_literal,
             $.string_literal,
+            $.collection,
             $.function_call
+        ),
+
+        collection: $ => seq(
+            '[',
+                optional($._expression_list),
+            ']'
         ),
 
         function: $ => seq(
@@ -70,6 +77,11 @@ module.exports = grammar({
             '{',
                 optional($._data_definition_parameter_list),
             '}',
+        ),
+
+        _expression_list: $ => seq(
+            $._expression,
+            repeat(seq(',', $._expression))
         ),
 
         _data_definition_parameter_list: $ => seq(
@@ -127,10 +139,12 @@ module.exports = grammar({
 
         parameter: $ => $.identifier,
 
-        column_identifier: $ => seq(
-            '@',
+        column_reference: $ => seq(
+            field("column_symbol", $.column_symbol),
             $.identifier
         ),
+
+        column_symbol: $ => "@",
 
         // Any identifier in the language. Needs to start with an alphabetic character.
         identifier: $ => prec(1, /[a-zA-Z][a-zA-Z0-9_]+/),

@@ -21,7 +21,11 @@
           "named": true
         },
         {
-          "type": "column_identifier",
+          "type": "collection",
+          "named": true
+        },
+        {
+          "type": "column_reference",
           "named": true
         },
         {
@@ -72,7 +76,11 @@
           "named": true
         },
         {
-          "type": "column_identifier",
+          "type": "collection",
+          "named": true
+        },
+        {
+          "type": "column_reference",
           "named": true
         },
         {
@@ -134,7 +142,11 @@
           "named": true
         },
         {
-          "type": "column_identifier",
+          "type": "collection",
+          "named": true
+        },
+        {
+          "type": "column_reference",
           "named": true
         },
         {
@@ -212,7 +224,11 @@
           "named": true
         },
         {
-          "type": "column_identifier",
+          "type": "collection",
+          "named": true
+        },
+        {
+          "type": "column_reference",
           "named": true
         },
         {
@@ -243,9 +259,75 @@
     }
   },
   {
-    "type": "column_identifier",
+    "type": "collection",
     "named": true,
     "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "alias",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "collection",
+          "named": true
+        },
+        {
+          "type": "column_reference",
+          "named": true
+        },
+        {
+          "type": "data_definition",
+          "named": true
+        },
+        {
+          "type": "expression_chain",
+          "named": true
+        },
+        {
+          "type": "function",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "num_literal",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "column_reference",
+    "named": true,
+    "fields": {
+      "column_symbol": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "column_symbol",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": false,
       "required": true,
@@ -298,7 +380,11 @@
           "named": true
         },
         {
-          "type": "column_identifier",
+          "type": "collection",
+          "named": true
+        },
+        {
+          "type": "column_reference",
           "named": true
         },
         {
@@ -349,7 +435,11 @@
           "named": true
         },
         {
-          "type": "column_identifier",
+          "type": "collection",
+          "named": true
+        },
+        {
+          "type": "column_reference",
           "named": true
         },
         {
@@ -400,7 +490,11 @@
           "named": true
         },
         {
-          "type": "column_identifier",
+          "type": "collection",
+          "named": true
+        },
+        {
+          "type": "column_reference",
           "named": true
         },
         {
@@ -510,7 +604,11 @@
           "named": true
         },
         {
-          "type": "column_identifier",
+          "type": "collection",
+          "named": true
+        },
+        {
+          "type": "column_reference",
           "named": true
         },
         {
@@ -605,7 +703,11 @@
     "named": false
   },
   {
-    "type": "@",
+    "type": "[",
+    "named": false
+  },
+  {
+    "type": "]",
     "named": false
   },
   {
@@ -615,6 +717,10 @@
   {
     "type": "as",
     "named": false
+  },
+  {
+    "type": "column_symbol",
+    "named": true
   },
   {
     "type": "comment",

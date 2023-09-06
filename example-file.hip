@@ -1,5 +1,14 @@
-input = 1
+input = csv { path: "/Users/simon/Downloads/job_placement_data.csv" }
+input2 = csv {
+    path: "/Users/simon/Downloads/job_placement_data.csv",
+    infer_max_records: 100
+}
 
-input2 = "hello"
+placed_by_gender = fn(input) {
+    input
+    | select(@status, @work_experience)
+    | filter(@status == "Placed")
+    | aggregate([@work_experience, @gender], count())
+}
 
-input4 = my_number123
+placed_by_gender(input)
