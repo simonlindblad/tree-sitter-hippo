@@ -528,6 +528,10 @@
         {
           "type": "string_literal",
           "named": true
+        },
+        {
+          "type": "use",
+          "named": true
         }
       ]
     }
@@ -638,6 +642,29 @@
         {
           "type": "string_literal",
           "named": true
+        },
+        {
+          "type": "use",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "use",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
         }
       ]
     }
@@ -741,6 +768,10 @@
   {
     "type": "string_literal",
     "named": true
+  },
+  {
+    "type": "use",
+    "named": false
   },
   {
     "type": "{",

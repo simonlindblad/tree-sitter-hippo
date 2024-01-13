@@ -17,6 +17,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "use"
+        },
+        {
+          "type": "SYMBOL",
           "name": "_expression"
         }
       ]
@@ -39,6 +43,44 @@
         {
           "type": "SYMBOL",
           "name": "_expression"
+        }
+      ]
+    },
+    "use": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "use"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string_literal"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_alias"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        }
+      ]
+    },
+    "_alias": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "as"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
         }
       ]
     },
@@ -477,6 +519,14 @@
           }
         }
       ]
+    },
+    "as_keyword": {
+      "type": "STRING",
+      "value": "as"
+    },
+    "use_keyword": {
+      "type": "STRING",
+      "value": "use"
     },
     "or_operator": {
       "type": "STRING",

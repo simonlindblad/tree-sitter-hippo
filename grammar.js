@@ -14,6 +14,7 @@ module.exports = grammar({
         // all the top-level statements that are allowed.
         _statement: $ => choice(
             $.assignment,
+            $.use,
             $._expression,
         ),
 
@@ -22,6 +23,17 @@ module.exports = grammar({
             field("left", $.identifier),
             '=',
             $._expression
+        ),
+
+        use: $ => seq(
+            'use',
+            $.string_literal,
+            optional($._alias)
+        ),
+
+        _alias: $ => seq(
+            'as',
+            $.identifier,
         ),
 
         // _expression is a helper rule that allows us to define all the expressions that we support
@@ -130,6 +142,8 @@ module.exports = grammar({
             ))
         ),
 
+        as_keyword: $ => 'as',
+        use_keyword: $ => 'use',
         or_operator: $ => 'or',
         and_operator: $ => 'and',
         comparison_operator: $ => choice('==', '!=', '<', '>', '<=', '>='),

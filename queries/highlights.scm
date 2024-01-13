@@ -39,6 +39,7 @@
   "[" @punctuation.bracket
   "]" @punctuation.bracket
 
+  "use" @keyword
   "as" @keyword
   "fn" @keyword
   ":" @punctuation.delimiter
