@@ -4,7 +4,7 @@ Function calls
 
 call1()
 call2(var1)
-call2(var1, var2)
+call3(var1, var2)
 
 ---
 
