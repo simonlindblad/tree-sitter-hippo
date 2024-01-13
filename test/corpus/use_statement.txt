@@ -1,0 +1,15 @@
+==================
+Use Statements
+==================
+
+use "github:simonlindblad/devops" as test
+use "github:simonlindblad/devops"
+
+---
+
+(source_file
+  (use
+      (string_literal)
+      (identifier))
+  (use
+      (string_literal)))
