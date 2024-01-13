@@ -18,12 +18,14 @@ data as raw_data
             (binary_expression
                 (binary_expression
                     (column_reference
+                        column_symbol: (column_symbol)
                         (identifier))
                     operator: (comparison_operator)
                     (num_literal))
                 operator: (and_operator)
                 (binary_expression
                     (column_reference
+                        column_symbol: (column_symbol)
                         (identifier))
                     operator: (comparison_operator)
                     (num_literal)))))
